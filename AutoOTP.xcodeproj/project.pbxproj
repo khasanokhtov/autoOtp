@@ -14,6 +14,8 @@
 		FB16E629286DBD6100D0DE32 /* AutoOTPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16E628286DBD6100D0DE32 /* AutoOTPTests.swift */; };
 		FB16E633286DBD6100D0DE32 /* AutoOTPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16E632286DBD6100D0DE32 /* AutoOTPUITests.swift */; };
 		FB16E635286DBD6100D0DE32 /* AutoOTPUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16E634286DBD6100D0DE32 /* AutoOTPUITestsLaunchTests.swift */; };
+		FB16E643286DBE5900D0DE32 /* Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16E642286DBE5900D0DE32 /* Verification.swift */; };
+		FB16E646286DBF8C00D0DE32 /* OTPVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16E645286DBF8C00D0DE32 /* OTPVIewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		FB16E62E286DBD6100D0DE32 /* AutoOTPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoOTPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB16E632286DBD6100D0DE32 /* AutoOTPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoOTPUITests.swift; sourceTree = "<group>"; };
 		FB16E634286DBD6100D0DE32 /* AutoOTPUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoOTPUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FB16E642286DBE5900D0DE32 /* Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verification.swift; sourceTree = "<group>"; };
+		FB16E645286DBF8C00D0DE32 /* OTPVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVIewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,8 @@
 		FB16E616286DBD6000D0DE32 /* AutoOTP */ = {
 			isa = PBXGroup;
 			children = (
+				FB16E644286DBF7E00D0DE32 /* ViewModel */,
+				FB16E641286DBE4F00D0DE32 /* View */,
 				FB16E617286DBD6000D0DE32 /* AutoOTPApp.swift */,
 				FB16E619286DBD6000D0DE32 /* ContentView.swift */,
 				FB16E61B286DBD6000D0DE32 /* Assets.xcassets */,
@@ -125,6 +131,22 @@
 				FB16E634286DBD6100D0DE32 /* AutoOTPUITestsLaunchTests.swift */,
 			);
 			path = AutoOTPUITests;
+			sourceTree = "<group>";
+		};
+		FB16E641286DBE4F00D0DE32 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FB16E642286DBE5900D0DE32 /* Verification.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FB16E644286DBF7E00D0DE32 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FB16E645286DBF8C00D0DE32 /* OTPVIewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +279,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB16E646286DBF8C00D0DE32 /* OTPVIewModel.swift in Sources */,
+				FB16E643286DBE5900D0DE32 /* Verification.swift in Sources */,
 				FB16E61A286DBD6000D0DE32 /* ContentView.swift in Sources */,
 				FB16E618286DBD6000D0DE32 /* AutoOTPApp.swift in Sources */,
 			);
