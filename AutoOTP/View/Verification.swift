@@ -13,16 +13,50 @@ struct Verification: View {
     var body: some View {
         VStack{
             OTPField()
+            
+            Button{
+                
+            } label: {
+                Text("Verify")
+                    .fontWeight(.semibold)
+                    .foregroundColor(.white)
+                    .padding(.vertical, 12)
+                    .frame(maxWidth: .infinity)
+                    .background{
+                        RoundedRectangle(cornerRadius: 10, style: .continuous)
+                            .fill(.blue)
+                    }
+            }
+            .disabled(checkStates())
+            .opacity(checkStates() ? 0.4 : 1)
+            .padding(.vertical)
+            
+            HStack(spacing: 12){
+                Text("Didn't get otp?")
+                    .font(.caption)
+                    .foregroundColor(.gray)
+                
+                Button("Resend"){}.font(.callout)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
         .padding()
         .frame(maxWidth: .infinity, alignment: .bottom)
         .navigationTitle("Verification")
-        .offset(y: -290)
+        .offset(y: -260)
         .onChange(of: otpModel.otpFields) { newValue in
             OTPCondition(value: newValue)
         }
     }
-    //Conditions for custom OTP
+    
+    func checkStates()->Bool{
+        for index in 0..<6{
+            if otpModel.otpFields[index].isEmpty{return true}
+        }
+        
+        return false
+    }
+    
     func OTPCondition(value: [String]){
         
         // Next field moving
@@ -45,7 +79,7 @@ struct Verification: View {
         }
     }
     
-    // Custom OTP TextField
+    
     @ViewBuilder
     func OTPField()->some View{
         HStack(spacing: 14){
